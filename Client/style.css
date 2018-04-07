@@ -1,0 +1,15 @@
+.high {
+	color:  red;
+}
+
+.low {
+	color: black;
+}
+
+.medium {
+	color: orange;
+}
+
+.donetrue {
+	text-decoration: line-through;
+}
