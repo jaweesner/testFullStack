@@ -7,8 +7,8 @@ class App extends React.Component{
 	}
 
 	componentDidMount(){
-		$.get("http://127.0.0.1:8080/todos",(res)=>{
-        this.setState(todos: JSON.parse(res)});
+		$.get("http://127.0.0.1:8080/todos",(res) => {
+        this.setState({todos: JSON.parse(res)});
       })
 	}
 
@@ -42,7 +42,7 @@ var List = (props) => (
 )
 
 var Item = (props) => (
-	<div className = ""+{props.todo.priority}+', '+ 'done'+{props.todo.done}  onClick = {() => props.onClick({props.todo.id})} >
+	<div className = {`${props.todo.priority}, ${props.todo.done}`}  onClick = {() => props.onClick(props.todo.id)} >
 		{props.todo.event}
 		{props.todo.due}
 	</div>

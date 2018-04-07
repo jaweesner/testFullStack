@@ -23,5 +23,8 @@ var query = function(q) {
 
 module.exports = {
 	handleGet: () => query('SELECT * FROM items'),
-	handlePost: ({event, due, priority,done}) => query(`INSERT INTO items(event, due, priority, done) VALUES (${event}, ${due}, ${priority}, ${done})`)
+	handlePost: ({event, due, priority,done}) => query(`INSERT INTO items(event, due, priority, done) VALUES ('${event}', '${due}', '${priority}', ${done})`)
 }
+
+
+//query(`INSERT INTO items(event, due, priority, done) VALUES (${event}, ${due}, ${priority}, ${done})`
